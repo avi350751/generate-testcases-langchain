@@ -1,6 +1,6 @@
 ### Generate Test Cases Automatically from User Stories & Acceptance Criteria
 
-This project demonstrates how to use LangChain, OpenAI GPT models, and structured output parsers to automatically generate high-quality test cases for manual and automation QA workflows. Use Promptfoo to evaluate the responses.
+This project demonstrates how to use LangChain, OpenAI GPT models, and structured output parsers to automatically generate high-quality test cases for manual and automation QA workflows.
 
 It follows a simple architecture:
 
@@ -13,8 +13,6 @@ LLM (GPT-4.1-mini)
 JsonOutputParser
         ↓
 Structured Test Cases in JSON
-        ↓
-Evaluate response using Promptfoo
 
 🔥 Features
 
@@ -30,22 +28,19 @@ Produces:
 - Easy to integrate into CI/CD, Promptfoo evaluation, or Auto-Test pipelines.
 
 📂 Project Structure
-project3-promptfoo/
-|--dataset
-  |__ stories_ac.yaml
+project2-langchain/
 │── helper.py
-│── test_case_generator.py
-|-- promptfooconfig.yaml
+│── test_generator.py
 │── requirements.txt
 │── README.md
 │── .env
 │── .gitignore
 
 # Getting started
-python3 -m venv myenv
+python3 -m venv .venv
 source myenv/bin/activate      # macOS / Linux
 myenv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
 
-promptfoo eval --no-cache
+streamlit run helper.py
